@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="685.0" prefWidth="972.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagePlaceProgramFormController">
+   <children>
+      <ImageView fitHeight="67.0" fitWidth="58.0" layoutX="38.0" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@../assests/images/Order.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="130.0" layoutY="27.0" prefHeight="45.0" prefWidth="251.0" text="Place Program" textFill="#7c0303">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblPlaceProgramDetails" layoutX="22.0" layoutY="402.0" prefHeight="190.0" prefWidth="929.0">
+         <columns>
+            <TableColumn prefWidth="98.0" text="Code" />
+            <TableColumn prefWidth="213.0" text="Description" />
+            <TableColumn prefWidth="133.0" text="Qty" />
+            <TableColumn prefWidth="191.0" text="Program Fee" />
+            <TableColumn prefWidth="162.0" text="Total" />
+            <TableColumn prefWidth="131.0" text="Delete" />
+         </columns>
+         <stylesheets>
+            <URL value="@../assests/styles/Style.css" />
+            <URL value="@../assests/styles/Style.css" />
+         </stylesheets>
+      </TableView>
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="782.0" layoutY="100.0" prefHeight="30.0" prefWidth="161.0" text="1998-12-13" textFill="#8d0e0e">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="23.0" layoutY="613.0" text="Total :- 0.00/=" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="30.0" />
+         </font>
+      </Label>
+      <JFXButton id="btnSave" fx:id="btnPlaceProgram" buttonType="RAISED" layoutX="750.0" layoutY="607.0" onAction="#placeProgramOnAction" prefHeight="45.0" prefWidth="193.0" style="-fx-background-color: #F79F1F;" text="Place Program">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font></JFXButton>
+      <Separator layoutX="387.0" layoutY="45.0" prefHeight="6.0" prefWidth="565.0" style="-fx-background-color: red;" />
+      <Pane layoutX="22.0" layoutY="139.0" prefHeight="240.0" prefWidth="929.0" style="-fx-background-color: #c7ecee;">
+         <children>
+      <!--      <JFXButton id="btnAddNewOrder" fx:id="btnAddNewOrder" layoutX="518.0" layoutY="25.0" onAction="#btnAddNew_OnAction" prefHeight="35.0" prefWidth="122.0" style="-fx-cursor: hand; -fx-background-color: #007bff; -fx-text-fill: white;" text="+ New Order" />-->
+            <JFXComboBox fx:id="cmbStudentId" focusColor="#0dd359" labelFloat="true" layoutX="14.0" layoutY="28.0" prefHeight="31.0" prefWidth="140.0" promptText="Student ID :-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtStudentName" focusColor="#0dd359" labelFloat="true" layoutX="196.0" layoutY="25.0" prefHeight="37.0" prefWidth="214.0" promptText="Student Name :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cmbProgramCode" focusColor="#0dd359" labelFloat="true" layoutX="14.0" layoutY="93.0" prefHeight="31.0" prefWidth="140.0" promptText="Program Code :-">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXTextField fx:id="txtDescription" focusColor="#0dd359" labelFloat="true" layoutX="194.0" layoutY="90.0" prefHeight="37.0" prefWidth="712.0" promptText="Program Description :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtFreeSpace" focusColor="#0dd359" labelFloat="true" layoutX="14.0" layoutY="156.0" prefHeight="37.0" prefWidth="140.0" promptText="Free Space :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtProgramFee" focusColor="#0dd359" labelFloat="true" layoutX="196.0" layoutY="156.0" prefHeight="37.0" prefWidth="214.0" promptText="Program Fee :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtQty" focusColor="#0dd359" labelFloat="true" layoutX="440.0" layoutY="156.0" prefHeight="37.0" prefWidth="214.0" promptText="Qty :- ">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton id="btnSave" fx:id="btnSave" buttonType="RAISED" layoutX="728.0" layoutY="168.0" onAction="#addToCartOnAction" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: #74b9ff;" text="Add to cart" textFill="#361b1b" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="txtStudentAddress" focusColor="#0dd359" labelFloat="true" layoutX="440.0" layoutY="25.0" prefHeight="37.0" prefWidth="214.0" promptText="Student Address :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtStudentCity" focusColor="#0dd359" labelFloat="true" layoutX="691.0" layoutY="25.0" prefHeight="37.0" prefWidth="214.0" promptText="Student City :-">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </JFXTextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
